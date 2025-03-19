@@ -1,0 +1,25 @@
+{
+  "name": "conference-ticket-generator",
+  "version": "1.0.0",
+  "description": "![Design preview for the Conference ticket generator coding challenge](./preview.jpg)",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev":"npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clivepato93/conference-ticket-generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/clivepato93/conference-ticket-generator/issues"
+  },
+  "homepage": "https://github.com/clivepato93/conference-ticket-generator#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.0.14",
+    "tailwindcss": "^4.0.14"
+  }
+}

@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@layer base, theme, components, utilities;
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	width: 100vw;
+	background-color: aqua;
+}
+
+.container {
+	background-image: url(/assets/images/background-mobile.png);
+	position: absolute;
+	background-position: right;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100%;
+	width: 100%;
+	z-index: -20;
+}
+
+@layer utilities {
+	.container {
+		@media (width >= 40rem) {
+			max-width: 100% ;
+		}
+		@media (width >= 48rem) {
+			max-width: 100%;
+		}
+		@media (width >= 64rem) {
+			max-width: 100%;
+		}
+		@media (width >= 80rem) {
+			max-width: 100%;
+		}
+		@media (width >= 96rem) {
+			max-width: 100%;
+		}
+	}
+}
