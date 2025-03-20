@@ -25,6 +25,24 @@ body {
 	z-index: -20;
 }
 
+@media (width >= 768px){
+	.container{
+		background-image: url(/assets/images/background-tablet.png);
+	}
+}
+
+@media (width >= 768px){
+	.container{
+		background-image: url(/assets/images/background-tablet.png);
+	}
+}
+
+@media (width >= 1440px){
+	.container{
+		background-image: url(/assets/images/background-desktop.png);
+	}
+}
+
 @layer utilities {
 	.container {
 		@media (width >= 40rem) {
