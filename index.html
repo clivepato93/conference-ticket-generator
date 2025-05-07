@@ -1,61 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <link href="./src/output.css" rel="stylesheet">
-  <script src="script.js" defer></script>
-  <title>Frontend Mentor | Conference ticket generator</title>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./assets/images/favicon-32x32.png"
+		/>
+		<link href="/src/output.css" rel="stylesheet" />
+		<script src="script.js" defer></script>
+		<title>Frontend Mentor | Conference ticket generator</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-  <!-- <link rel="stylesheet" href="style.css"> -->
-</head>
-<body>
-  <div class="container"></div>
-  <!-- <div class="container2"></div> -->
-  <!-- <div class="pattern-lines"></div> -->
-  <!-- Form starts -->
-<div>
-  Your Journey to Coding Conf 2025 Starts Here!
+		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+		<style>
+			.attribution {
+				font-size: 11px;
+				text-align: center;
+			}
+			.attribution a {
+				color: hsl(228, 45%, 44%);
+			}
+		</style>
+		<!-- <link rel="stylesheet" href="style.css"> -->
+	</head>
+	<body class="">
+<!-- Congrats, Jonatan Kristof! Your ticket is ready. -->
+		<!-- We've emailed your ticket to jonatan@email.com and will send updates in the run up to the event. -->
+		<img src="/assets/images/background-mobile.png" alt="testing" class="md:hidden">
+		<img src="/assets/images/background-tablet.png" alt="testing" class="hidden md:block">
+		<img src="/assets/images/background-tablet.png" alt="testing" class="hidden laptop:block">
 
-  Secure your spot at next year's biggest coding conference.
+		<img src="/assets/images/pattern-squiggly-line-top.svg" alt="top-line"  class="	top-[2vh] laptop:top-[5vh] 	h-[12.441vw];
 
-  Upload Avatar
-  Drag and drop or click to upload
-  Upload your photo (JPG or PNG, max size: 500KB).
+		"/>
+		<img
+			src="/assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg"
+			alt="bottom-line"
+			class="mob-img"
+		/>
 
-  Full Name
+		<img
+			src="/assets/images/pattern-squiggly-line-bottom-desktop.svg"
+			alt="bottom-line"
+			class="desktop-img"
+		/>
 
-  Email Address
-  example@email.com
+		<!-- <div class="img-container"> -->
+			<!-- <img class='w-full h-full' src="/assets/images/background-mobile.png" alt=""> -->
+		 </div>
+		<div class="lines-container"></div>
+		<main class="flex flex-col items-center mx-auto  laptop:text-center text-left">
+			 <img
+				src="/assets/images/logo-full.svg"
+				alt="logo"
+				class="mb-12 mt-8 bg-Neutral-900"
+			/>
+			<h1 class="border-2  text-[7vw] text-center laptop:text-[3.5vw] ">
+				Your Journey to Coding Conf <br class="hidden laptop:block"> 2025 Starts Here!
+			</h1>
+			<h2  class="text-Neutral-500 text-[1.2rem] laptop:text-[3vw]">
+				Secure your spot at next year's biggest coding conference.
+			</h2>
+			<header class=""></header>
+			<form
+				action=""
+				class="text-left text-Neutral-0 text-[1.5rem] mt-8 relative max-w-[550px] md:w-[550px] flex flex-col "
+				
+			>
+			<img src="/assets/images/pattern-circle.svg" alt="" class="fixed laptop:absolute -z-10 fixed-pos laptop:right-[-30%]">
+			<input type="file" name="file" id="file"  class="hidden " accept=".jpg,.png" tabindex="0"/>
+			<h3 class="">Upload Avatar</h3>
+			<label for="file" class="label">
+			<section tabindex="2" class="text-center focus:outline-4 outline-Neutral-700 file-box flex flex-col items-center file-container border-dashed border-4 rounded-2xl border-Neutral-500   p-8 group relative group">
+				<div class="absolute h-full top-0 w-full bg-Neutral-500 opacity-20 group-hover:opacity-60 -z-10"></div>
+				<div class="border-2 border-Neutral-500 rounded-2xl w-[70px] h-[70px] p-2 flex justify-center" ><img src="/assets/images/icon-upload.svg" alt="" class="upload  h-full w-full"></div>
+				<h4 class="text-Neutral-500 group-hover:text-Neutral-0 upload-info">Drag and drop or click to upload</h4>
+				<section class="file-buttons text-[.8vw] gap-4 *:bg-Neutral-700 *:rounded-xl *:p-[.4vw] hidden mt-5">
+					<button class="remove">Remove Image</button><button class="change">Change Image</button>
+				</section>
+			</section>
+		</label>
+		<div class="flex gap-3 text-[1.5vw] laptop:text-[1rem] mt-4 file-info"> <img src="/assets/images/icon-info.svg" alt="" class="icon"> <h4 class="file-text">Upload your photo (JPG or PNG, max size: 500KB).</h4></div>
+		<section class="inputs flex flex-col gap-6">
+			<section class="">
+				
+				<label for="name">Full Name</label>
+				<div class="relative">
+				<input type="text" id="name" class=" w-full border-Neutral-500 border-2 rounded-xl bg-transparent" />
+				<div class="absolute h-full top-0 w-full rounded-xl bg-Neutral-500 opacity-20 group-hover:opacity-60 z-[-10]"></div>
+				<div class="flex gap-3 text-[1.5vw] laptop:text-[1rem] mt-2 file-info absolute hidden name-error"> <img src="/assets/images/icon-info.svg" alt="" class="icon error"> <h4 class="file-text text-Gradient-text">Please enter your name.</h4></div>
 
-  GitHub Username
-  @yourusername
+			</div></section>
+			<section class="">
+				
+				<label for="email">Email</label>
+				<div class="relative">
+				<input type="email" id="email" class=" w-full border-Neutral-500 border-2 rounded-xl bg-transparent px-2 py-1" placeholder="example@mail.com"/>
+				<div class="absolute h-full top-0 w-full bg-Neutral-500 opacity-20 rounded-xl group-hover:opacity-60 z-[-10]"></div>
+				<div class="flex gap-3 text-[1.5vw] laptop:text-[1rem] mt-2 file-info absolute hidden email-error"> <img src="/assets/images/icon-info.svg" alt="" class="icon error"> <h4 class="file-text text-Gradient-text">Please a valid email address.</h4></div>
 
-  Generate My Ticket
+			</div></section>
+			<section class="">
+				
+				<label for="githubname">Github Username</label>
+				<div class="relative">
+				<input type="text" id="githubname" class=" w-full border-Neutral-500 border-2 rounded-xl bg-transparent px-2 py-1" placeholder="@yourusername"/>
+				<div class="absolute h-full top-0 w-full bg-Neutral-500 rounded-xl opacity-20 group-hover:opacity-60 z-[-10]"></div>
+				<div class="flex gap-3 text-[1.5vw] laptop:text-[1rem] mt-2 file-info absolute hidden git-error"> <img src="/assets/images/icon-info.svg" alt="" class="icon error"> <h4 class="file-text text-Gradient-text">Please a valid Github name.</h4></div>
 
-  <!-- Form ends -->
+			</div></section>
+			<button type="submit" class="bg-Orange-500 text-center text-Neutral-900 font-bold w-full rounded-xl submit mt-4">Generate My Ticket</button>
+		</section> 
+			</form>
+			
+			
+		</main>
 
-  <!-- Generated tickets starts -->
+		<!-- <img src="/assets/images/pattern-lines.svg" alt="" class="absolute"> -->
+		<!-- <div class="info">
+    <div class="test">
+      <div class="test2"></div>
+   </div> -->
+		<!-- <div class="container2"></div> -->
+		<!-- <div class="pattern-lines"></div> -->
+		<!-- Form starts -->
+		<!-- <div>
+			<div class="clear">
+				Your Journey to Coding Conf 2025 Starts Here! Secure your spot at next
+				year's biggest coding conference. Upload Avatar Drag and drop or click
+				to upload Upload your photo (JPG or PNG, max size: 500KB). Full Name
+				Email Address example@email.com GitHub Username @yourusername Generate
+				My Ticket
 
-  Congrats, <!-- Full Name -->! Your ticket is ready.
+				Form ends
 
-  We've emailed your ticket to <!-- Email Address --> and will send updates in the run up to the event.
+				Generated tickets starts
 
-  Coding Conf
-  Jan 31, 2025 / Austin, TX
-</div>
-  <!-- Generated tickets ends -->
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+				Congrats,
+				Full Name! Your ticket is ready. We've emailed your ticket to
+				Email Address
+				and will send updates in the run up to the event. Coding Conf Jan 31,
+				2025 / Austin, TX
+        <div class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+          Coded by <a href="#">Your Name Here</a>.
+        </div>
+			</div>
+		</div> -->
+		<!-- Generated tickets ends -->
+	</body>
 </html>
