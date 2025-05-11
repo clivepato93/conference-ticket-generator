@@ -16,10 +16,6 @@
 	--font-Inconsolata: Inconsolata, "sans-serif";
 }
 
-.fixed-pos{
-	right:calc(0% - 30%)
-}
-
 body {
 	height: 100vh;
 	width: 100vw;
@@ -27,11 +23,15 @@ body {
 	color: var(--color-Neutral-0);
 }
 
+.ticket{
+	/* background-image:url(/assets/images/pattern-ticket.svg) */
+}
+
 [alt="testing"]{
  z-index:-100;
  position:fixed;
  width:100%;
- /* object-fit:contain; */
+ /* object-fit:cover; */
  height:100%;
 }
 
