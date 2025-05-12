@@ -25,48 +25,43 @@
 				color: hsl(228, 45%, 44%);
 			}
 		</style>
-		<!-- <link rel="stylesheet" href="style.css"> -->
 	</head>
 	<body class="">
-		<!-- Congrats, Jonatan Kristof! Your ticket is ready. -->
-		<!-- We've emailed your ticket to jonatan@email.com and will send updates in the run up to the event. -->
 		<img
 			src="/assets/images/background-mobile.png"
-			alt="testing"
-			class="md:hidden"
+			alt=""
+			class="md:hidden fixed -z-50 w-full h-[100vh]"
 		/>
 		<img
 			src="/assets/images/background-tablet.png"
 			alt="testing"
-			class="hidden md:block laptop:hidden"
+			class="hidden md:block laptop:hidden fixed -z-50 w-full h-[100vh]"
 		/>
 		<img
 			src="/assets/images/background-tablet.png"
 			alt="testing"
-			class="hidden laptop:block"
+			class="hidden laptop:block fixed -z-50 w-full h-[100vh]"
 		/>
 
 		<img
 			src="/assets/images/pattern-squiggly-line-top.svg"
 			alt="top-line"
-			class="top-[2vh] laptop:top-[5vh] h-[12.441vw];"
+			class="fixed top-[2vh] laptop:top-[5vh] h-[12.441vw] right-0"
 		/>
 		<img
 			src="/assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg"
 			alt="bottom-line"
-			class="mob-img"
+			class="block laptop:hidden fixed bottom-0 z-0"
 		/>
 
 		<img
 			src="/assets/images/pattern-squiggly-line-bottom-desktop.svg"
 			alt="bottom-line"
-			class="desktop-img"
+			class="hidden laptop:block fixed bottom-0 z-0"
 		/>
-
-		<!-- <div class="img-container">
-			<img class='w-full h-full' src="/assets/images/background-mobile.png" alt="">
-		 </div> -->
-		<div class="lines-container"></div>
+		<div
+			class="bg-[url(/assets/images/pattern-lines.svg)] absolute bg-cover h-[100vh] w-full -z-20;"
+		></div>
 
 		<main
 			class="flex flex-col items-center mx-auto laptop:text-center text-left"
@@ -76,7 +71,7 @@
 				alt="logo"
 				class="mb-4 mt-4 bg-Neutral-900"
 			/>
-			<h1 class="text-[7vw] text-center laptop:text-[3.5vw]">
+			<h1 class="text-[7vw] text-center laptop:text-[3.5vw] font-bold p-2">
 				Your Journey to Coding Conf <br class="hidden laptop:block" />
 				2025 Starts Here!
 			</h1>
@@ -116,19 +111,21 @@
 								class="upload h-full w-full"
 							/>
 						</div>
-						<h4 class="text-Neutral-500 text-[1rem] sm:text-2xl group-hover:text-Neutral-0 upload-info">
+						<h4
+							class="text-Neutral-500 text-[1rem] sm:text-2xl group-hover:text-Neutral-0 upload-info"
+						>
 							Drag and drop or click to upload
 						</h4>
 
 						<section
-							class="file-buttons text-[1rem]  *:p-1  gap-4 *:bg-Neutral-700 *:rounded-[6px] hidden mt-4"
+							class="file-buttons text-[1rem] *:p-1 gap-4 *:bg-Neutral-700 *:rounded-[6px] hidden mt-4"
 						>
 							<button class="remove">Remove Image</button
 							><button class="change">Change Image</button>
 						</section>
 					</section>
 				</label>
-				<div class="flex gap-3 text-[3.2vw] laptop:text-[1rem] mt-4 file-info">
+				<div class="flex gap-3 text-[1rem] mt-4 file-info">
 					<img src="/assets/images/icon-info.svg" alt="" class="icon" />
 					<h4 class="file-text">
 						Upload your photo (JPG or PNG, max size: 500KB).
@@ -152,12 +149,13 @@
 								class="absolute h-full top-0 w-full rounded-xl bg-Neutral-500 opacity-20 group-hover:opacity-60 z-[-10]"
 							></div>
 							<div
-								class="flex gap-3 text-[1.5vw] laptop:text-[1rem] mt-2 file-info absolute hidden name-error"
+								class=" gap-3 text-[1rem] mt-2 file-info absolute hidden  name-error"
 							>
 								<img
 									src="/assets/images/icon-info.svg"
 									alt=""
 									class="icon error"
+
 								/>
 								<h4 class="file-text text-Gradient-text">
 									Please enter your name.
@@ -178,12 +176,12 @@
 								class="absolute h-full top-0 w-full bg-Neutral-500 opacity-20 rounded-xl group-hover:opacity-60 z-[-10]"
 							></div>
 							<div
-								class="flex gap-3 text-[1.5vw] laptop:text-[1rem] mt-2 file-info absolute hidden email-error"
+								class="gap-3 text-[1rem] mt-2 file-info absolute hidden email-error"
 							>
 								<img
 									src="/assets/images/icon-info.svg"
 									alt=""
-									class="icon error"
+									class="icon filter-error"
 								/>
 								<h4 class="file-text text-Gradient-text">
 									Please a valid email address.
@@ -204,12 +202,12 @@
 								class="absolute h-full top-0 w-full bg-Neutral-500 rounded-xl opacity-20 group-hover:opacity-60 z-[-10]"
 							></div>
 							<div
-								class="flex gap-3 text-[1.5vw] laptop:text-[1rem] mt-2 file-info absolute hidden git-error"
+								class=" gap-3 text-[1rem] mt-2 file-info absolute hidden git-error"
 							>
 								<img
 									src="/assets/images/icon-info.svg"
 									alt=""
-									class="icon error"
+									class="icon filter-error"
 								/>
 								<h4 class="file-text text-Gradient-text">
 									Please a valid Github name.
@@ -219,13 +217,12 @@
 					</section>
 					<button
 						type="submit"
-						class="bg-Orange-500 text-center text-Neutral-900 font-bold w-full rounded-xl submit mt-1 p-1"
+						class="bg-Orange-500 text-center text-Neutral-900 font-bold w-full rounded-xl submit mt-4 p-1"
 					>
 						Generate My Ticket
 					</button>
 				</section>
 			</form>
 		</main>
-
 	</body>
 </html>

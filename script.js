@@ -16,13 +16,13 @@ const getElement = (selector) => document.querySelector(selector);
 const show = (selector) => {
 	const el = getElement(selector);
 	el.classList.remove("hidden");
-	el.classList.add("block");
+	el.classList.add("flex");
 	return true;
 };
 
 const hide = (selector) => {
 	const el = getElement(selector);
-	el.classList.remove("block");
+	el.classList.remove("flex");
 	el.classList.add("hidden");
 	return false;
 };
@@ -123,6 +123,10 @@ submit.addEventListener("click", function (e) {
 	</div>
 	</section>`;
 	}
+
+	else{
+
+	}
 });
 
 document.body.addEventListener("drop", (e) => e.preventDefault());
@@ -162,13 +166,14 @@ document.querySelector(".file-box").addEventListener("dragleave", (e) => {
 });
 
 function upload(e) {
+	// debugger
 	console.log(e);
 	let file = fileInput.files;
 	console.log(fileInput.files);
 
-	if (!document.querySelector(".upload-info").classList.contains("hidden")) {
-		hideInstructions();
-	}
+	// if (!document.querySelector(".upload-info").classList.contains("hidden")) {
+	// 	hideInstructions();
+	// }
 
 	if (returnFileSize(fileInput.files[0].size) > 500) {
 		document.querySelector(".file-info").classList.add("text-Gradient-text");
@@ -179,7 +184,16 @@ function upload(e) {
 		return;
 	}
 
-	if (fileInput.files.length) {
+	// if (returnFileSize(fileInput.files[0].size) <= 500 && document.querySelector(".icon").classList.contains('error')) {
+	// 	document.querySelector(".file-info").classList.remove("text-Gradient-text");
+	// 	document.querySelector(".file-text").textContent =
+	// 		"Upload your photo (JPG or PNG, max size: 500KB).";
+
+	// 	document.querySelector(".icon").classList.remove("error");
+	// 	return;
+	// }
+
+	if (returnFileSize(fileInput.files[0].size) <= 500) {
 		fileButtons.classList.toggle("hidden", false);
 		fileButtons.classList.toggle("flex", true);
 		console.log(returnFileSize(fileInput.files[0].size));
@@ -187,10 +201,8 @@ function upload(e) {
 		img = URL.createObjectURL(fileInput.files[0]);
 		document.querySelector(".upload").src = img;
 		document.querySelector(".upload").classList.remove("p-2");
-	} else {
 		hideInstructions();
-		return;
-	}
+	} 
 }
 
 fileInput.addEventListener("change", upload);
