@@ -122,10 +122,7 @@ submit.addEventListener("click", function (e) {
 		/>
 	</div>
 	</section>`;
-	}
-
-	else{
-
+	} else {
 	}
 });
 
@@ -176,6 +173,7 @@ function upload(e) {
 	// }
 
 	if (returnFileSize(fileInput.files[0].size) > 500) {
+		console.log(returnFileSize(fileInput.files[0].size));
 		document.querySelector(".file-info").classList.add("text-Gradient-text");
 		document.querySelector(".file-text").textContent =
 			"File too large. Please upload a photo under 500KB.";
@@ -202,7 +200,7 @@ function upload(e) {
 		document.querySelector(".upload").src = img;
 		document.querySelector(".upload").classList.remove("p-2");
 		hideInstructions();
-	} 
+	}
 }
 
 fileInput.addEventListener("change", upload);
@@ -215,7 +213,10 @@ removeBtn.addEventListener("click", (e) => {
 	fileButtons.classList.toggle("hidden");
 	document.querySelector(".upload-info").classList.toggle("hidden");
 	document.querySelector(".upload-info").classList.toggle("block");
-
+	document.querySelector(".file-info").classList.remove("text-Gradient-text");
+	document.querySelector(".icon").classList.remove("error");
+	document.querySelector(".file-text").textContent =
+		"Upload your photo (JPG or PNG, max size: 500KB).";
 	document.querySelector(".upload").src = "/assets/images/icon-upload.svg";
 	console.log((fileInput.files[0] = ""));
 });
